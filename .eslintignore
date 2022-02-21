@@ -1,0 +1,7 @@
+src/components/common/resource/fonts/*
+src/service/*
+src/router/*
+src/modules/*
+src/i18n/*
+src/assets/*
+src/*
