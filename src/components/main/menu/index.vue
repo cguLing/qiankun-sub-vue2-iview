@@ -91,6 +91,11 @@ export default {
       //   _systemMenu.updateActiveName()
       // })
     }
+  },
+  watch: {
+    '$route' (newRoute) {
+      this.expandSideMenu()
+    }
   }
 }
 </script>
