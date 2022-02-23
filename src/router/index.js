@@ -7,17 +7,27 @@ Vue.use(VueRouter)
 const routes =  [
   {
     path: '/',
+    name: '/',
+    redirect: '/home',
     meta: {
       hideInBread: true,
     },
-    name: 'home',
     component: Main,
     children: [
       {
+        path: '/home',
+        name: 'home',
+        meta: {
+          hide: true,
+          hideInBread: true,
+          title: '首页'
+        },
+      },
+      {
         path: '/dept',
         name: 'dept',
-        hide: false,
         meta: {
+          hide: false,
           icon: 'logo-windows',
           title: '业务部门负责人'
         },

@@ -18,6 +18,7 @@ import '@/components/resource/fonts'
 let sysMainframeInfo = {};
 Vue.prototype.$sysMainFrameInfo = Object.assign({
   APP_NAME: '子系统模板',
+  TAB_ON: true
 }, sysMainframeInfo)
 /* eslint-disable */
 

@@ -6,7 +6,7 @@ import {
   getHomeRoute,
   // getNextRoute,
   routeHasExist,
-  routeEqual,
+  // routeEqual,
   getRouteTitleHandled,
   localSave,
   localRead
@@ -24,7 +24,6 @@ export default {
   },
   getters: {
     menuList: (state, getters, rootState) => getMenuByRouter(routes, rootState.user.access),
-    errorCount: state => state.errorList.length
   },
   mutations: {
     setBreadCrumb (state, route) {
@@ -38,21 +37,21 @@ export default {
       if (list) {
         tagList = [...list]
       } else tagList = getTagNavListFromLocalstorage() || []
-      if (tagList[0] && tagList[0].name !== homeName) tagList.shift()
-      let homeTagIndex = tagList.findIndex(item => item.name === homeName)
-      if (homeTagIndex > 0) {
-        let homeTag = tagList.splice(homeTagIndex, 1)[0]
-        tagList.unshift(homeTag)
-      }
+      // if (tagList[0] && tagList[0].name !== homeName) tagList.shift()
+      // let homeTagIndex = tagList.findIndex(item => item.name === homeName)
+      // if (homeTagIndex > 0) {
+      //   let homeTag = tagList.splice(homeTagIndex, 1)[0]
+      //   tagList.unshift(homeTag)
+      // }
       state.tagNavList = tagList
       setTagNavListInLocalstorage([...tagList])
     },
-    closeTag (state, route) {
-      let tag = state.tagNavList.filter(item => routeEqual(item, route))
-      route = tag[0] ? tag[0] : null
-      if (!route) return
-      closePage(state, route)
-    },
+    // closeTag (state, route) {
+    //   let tag = state.tagNavList.filter(item => routeEqual(item, route))
+    //   route = tag[0] ? tag[0] : null
+    //   if (!route) return
+    //   closePage(state, route)
+    // },
     addTag (state, { route, type = 'unshift' }) {
       let router = getRouteTitleHandled(route)
       if (!routeHasExist(state.tagNavList, router)) {
