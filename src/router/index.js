@@ -18,7 +18,7 @@ const routes =  [
         path: '/home',
         name: 'home',
         meta: {
-          hide: true,
+          hideInMenu: true,
           hideInBread: true,
           title: '首页'
         },
@@ -27,7 +27,7 @@ const routes =  [
         path: '/dept',
         name: 'dept',
         meta: {
-          hide: false,
+          hideInMenu: false,
           icon: 'logo-windows',
           title: '业务部门负责人'
         },

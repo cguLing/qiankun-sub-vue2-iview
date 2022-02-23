@@ -50,11 +50,9 @@ export default {
     },
     getMenuName (menus, result = {Name: [], Menu: []}) {
       menus.forEach(value => {
-        if (value.meta['hideInBread']){
-          if (value.children) {
-            result.Menu=result.Menu.concat(value.children)
-            this.getMenuName(value.children, result)
-          }
+        if (value.children) {
+          result.Menu=result.Menu.concat(value.children)
+          // this.getMenuName(value.children, result)
         } else {
           result.Name.push(value.name)
           if (value.children) {
