@@ -83,7 +83,7 @@ export default {
         if (this.menuNames.includes(names[i])) {
           this.activeName = names[i]
           break
-        }
+        } else this.activeName = ''
       }
       // this.$nextTick(() => {
       //   const _systemMenu = this.$refs.systemMenu
@@ -93,7 +93,7 @@ export default {
     }
   },
   watch: {
-    '$route' (newRoute) {
+    '$route' () {
       this.expandSideMenu()
     }
   }
