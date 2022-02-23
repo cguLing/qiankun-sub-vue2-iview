@@ -1,0 +1,569 @@
+{
+  "id": "1518632",
+  "name": "SGM",
+  "font_family": "font_family",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11867372",
+      "name": "applyProperty",
+      "font_class": "applyProperty",
+      "unicode": "e4e2",
+      "unicode_decimal": 58594
+    },
+    {
+      "icon_id": "11867373",
+      "name": "bottomMonitoring",
+      "font_class": "bottomMonitoring",
+      "unicode": "e4e3",
+      "unicode_decimal": 58595
+    },
+    {
+      "icon_id": "11867374",
+      "name": "alarmConfiguration",
+      "font_class": "alarmConfiguration",
+      "unicode": "e4e4",
+      "unicode_decimal": 58596
+    },
+    {
+      "icon_id": "11867375",
+      "name": "basicInformation",
+      "font_class": "basicInformation",
+      "unicode": "e4e5",
+      "unicode_decimal": 58597
+    },
+    {
+      "icon_id": "11867376",
+      "name": "dataExport",
+      "font_class": "dataExport",
+      "unicode": "e4e6",
+      "unicode_decimal": 58598
+    },
+    {
+      "icon_id": "11867377",
+      "name": "basics",
+      "font_class": "basics",
+      "unicode": "e4e7",
+      "unicode_decimal": 58599
+    },
+    {
+      "icon_id": "11867378",
+      "name": "callChain",
+      "font_class": "callChain",
+      "unicode": "e4e8",
+      "unicode_decimal": 58600
+    },
+    {
+      "icon_id": "11867379",
+      "name": "customCollection",
+      "font_class": "customCollection",
+      "unicode": "e4e9",
+      "unicode_decimal": 58601
+    },
+    {
+      "icon_id": "11867380",
+      "name": "health",
+      "font_class": "health",
+      "unicode": "e4ea",
+      "unicode_decimal": 58602
+    },
+    {
+      "icon_id": "11867381",
+      "name": "chart",
+      "font_class": "chart",
+      "unicode": "e4eb",
+      "unicode_decimal": 58603
+    },
+    {
+      "icon_id": "11867382",
+      "name": "functionOption",
+      "font_class": "functionOption",
+      "unicode": "e4ec",
+      "unicode_decimal": 58604
+    },
+    {
+      "icon_id": "11867383",
+      "name": "invokeQuery",
+      "font_class": "invokeQuery",
+      "unicode": "e4ed",
+      "unicode_decimal": 58605
+    },
+    {
+      "icon_id": "11867384",
+      "name": "configure",
+      "font_class": "configure",
+      "unicode": "e4ee",
+      "unicode_decimal": 58606
+    },
+    {
+      "icon_id": "11867385",
+      "name": "garbageCollection",
+      "font_class": "garbageCollection",
+      "unicode": "e4ef",
+      "unicode_decimal": 58607
+    },
+    {
+      "icon_id": "11867386",
+      "name": "log",
+      "font_class": "log",
+      "unicode": "e4f0",
+      "unicode_decimal": 58608
+    },
+    {
+      "icon_id": "11867387",
+      "name": "implement",
+      "font_class": "implement",
+      "unicode": "e4f1",
+      "unicode_decimal": 58609
+    },
+    {
+      "icon_id": "11867388",
+      "name": "monitor",
+      "font_class": "monitor",
+      "unicode": "e4f2",
+      "unicode_decimal": 58610
+    },
+    {
+      "icon_id": "11867389",
+      "name": "monitoringMang",
+      "font_class": "monitoringMang",
+      "unicode": "e4f3",
+      "unicode_decimal": 58611
+    },
+    {
+      "icon_id": "11867390",
+      "name": "journal",
+      "font_class": "journal",
+      "unicode": "e4f4",
+      "unicode_decimal": 58612
+    },
+    {
+      "icon_id": "11867391",
+      "name": "instanceMonitoring",
+      "font_class": "instanceMonitoring",
+      "unicode": "e4f5",
+      "unicode_decimal": 58613
+    },
+    {
+      "icon_id": "11867392",
+      "name": "quit",
+      "font_class": "quit",
+      "unicode": "e4f6",
+      "unicode_decimal": 58614
+    },
+    {
+      "icon_id": "11867393",
+      "name": "source",
+      "font_class": "source",
+      "unicode": "e4f7",
+      "unicode_decimal": 58615
+    },
+    {
+      "icon_id": "11867394",
+      "name": "jvm",
+      "font_class": "jvm",
+      "unicode": "e4f8",
+      "unicode_decimal": 58616
+    },
+    {
+      "icon_id": "11867395",
+      "name": "chartMonitoring",
+      "font_class": "chartMonitoring",
+      "unicode": "e4f9",
+      "unicode_decimal": 58617
+    },
+    {
+      "icon_id": "11867396",
+      "name": "machineMemory",
+      "font_class": "machineMemory",
+      "unicode": "e4fa",
+      "unicode_decimal": 58618
+    },
+    {
+      "icon_id": "11867397",
+      "name": "mhConfigure",
+      "font_class": "mhConfigure",
+      "unicode": "e4fb",
+      "unicode_decimal": 58619
+    },
+    {
+      "icon_id": "11867398",
+      "name": "networkMonitoring",
+      "font_class": "networkMonitoring",
+      "unicode": "e4fc",
+      "unicode_decimal": 58620
+    },
+    {
+      "icon_id": "11867399",
+      "name": "monitorConfigure",
+      "font_class": "monitorConfigure",
+      "unicode": "e4fd",
+      "unicode_decimal": 58621
+    },
+    {
+      "icon_id": "11867400",
+      "name": "topologyCall",
+      "font_class": "topologyCall",
+      "unicode": "e4fe",
+      "unicode_decimal": 58622
+    },
+    {
+      "icon_id": "11867401",
+      "name": "performance",
+      "font_class": "performance",
+      "unicode": "e4ff",
+      "unicode_decimal": 58623
+    },
+    {
+      "icon_id": "11867402",
+      "name": "result",
+      "font_class": "result",
+      "unicode": "e500",
+      "unicode_decimal": 58624
+    },
+    {
+      "icon_id": "11867403",
+      "name": "topology",
+      "font_class": "topology",
+      "unicode": "e501",
+      "unicode_decimal": 58625
+    },
+    {
+      "icon_id": "11867404",
+      "name": "timeDetails",
+      "font_class": "timeDetails",
+      "unicode": "e502",
+      "unicode_decimal": 58626
+    },
+    {
+      "icon_id": "11867405",
+      "name": "viewSevise",
+      "font_class": "viewSevise",
+      "unicode": "e503",
+      "unicode_decimal": 58627
+    },
+    {
+      "icon_id": "11867406",
+      "name": "screen",
+      "font_class": "screen",
+      "unicode": "e504",
+      "unicode_decimal": 58628
+    },
+    {
+      "icon_id": "11867407",
+      "name": "monitoringManagement",
+      "font_class": "monitoringManagement",
+      "unicode": "e505",
+      "unicode_decimal": 58629
+    },
+    {
+      "icon_id": "11867408",
+      "name": "waterlever",
+      "font_class": "waterlever",
+      "unicode": "e506",
+      "unicode_decimal": 58630
+    },
+    {
+      "icon_id": "11867417",
+      "name": "addUser",
+      "font_class": "addUser",
+      "unicode": "e507",
+      "unicode_decimal": 58631
+    },
+    {
+      "icon_id": "11867418",
+      "name": "allNodes",
+      "font_class": "allNodes",
+      "unicode": "e508",
+      "unicode_decimal": 58632
+    },
+    {
+      "icon_id": "11867419",
+      "name": "apps",
+      "font_class": "apps",
+      "unicode": "e509",
+      "unicode_decimal": 58633
+    },
+    {
+      "icon_id": "11867420",
+      "name": "allApps",
+      "font_class": "allApps",
+      "unicode": "e50a",
+      "unicode_decimal": 58634
+    },
+    {
+      "icon_id": "11867421",
+      "name": "alarmConfiguration",
+      "font_class": "alarmConfiguration1",
+      "unicode": "e50b",
+      "unicode_decimal": 58635
+    },
+    {
+      "icon_id": "11867422",
+      "name": "calendar",
+      "font_class": "calendar",
+      "unicode": "e50c",
+      "unicode_decimal": 58636
+    },
+    {
+      "icon_id": "11867423",
+      "name": "allTps",
+      "font_class": "allTps",
+      "unicode": "e50d",
+      "unicode_decimal": 58637
+    },
+    {
+      "icon_id": "11867424",
+      "name": "iOS",
+      "font_class": "iOS",
+      "unicode": "e50e",
+      "unicode_decimal": 58638
+    },
+    {
+      "icon_id": "11867425",
+      "name": "errorTime",
+      "font_class": "errorTime",
+      "unicode": "e50f",
+      "unicode_decimal": 58639
+    },
+    {
+      "icon_id": "11867426",
+      "name": "activeUser",
+      "font_class": "activeUser",
+      "unicode": "e510",
+      "unicode_decimal": 58640
+    },
+    {
+      "icon_id": "11867427",
+      "name": "android",
+      "font_class": "android",
+      "unicode": "e511",
+      "unicode_decimal": 58641
+    },
+    {
+      "icon_id": "11867428",
+      "name": "navAccessQuery",
+      "font_class": "navAccessQuery",
+      "unicode": "e512",
+      "unicode_decimal": 58642
+    },
+    {
+      "icon_id": "11867429",
+      "name": "bank",
+      "font_class": "bank",
+      "unicode": "e513",
+      "unicode_decimal": 58643
+    },
+    {
+      "icon_id": "11867430",
+      "name": "CombinedShape",
+      "font_class": "CombinedShape",
+      "unicode": "e514",
+      "unicode_decimal": 58644
+    },
+    {
+      "icon_id": "11867431",
+      "name": "finance",
+      "font_class": "finance",
+      "unicode": "e515",
+      "unicode_decimal": 58645
+    },
+    {
+      "icon_id": "11867432",
+      "name": "healthAllocation",
+      "font_class": "healthAllocation",
+      "unicode": "e516",
+      "unicode_decimal": 58646
+    },
+    {
+      "icon_id": "11867433",
+      "name": "location",
+      "font_class": "location",
+      "unicode": "e517",
+      "unicode_decimal": 58647
+    },
+    {
+      "icon_id": "11867434",
+      "name": "navJS",
+      "font_class": "navJS",
+      "unicode": "e518",
+      "unicode_decimal": 58648
+    },
+    {
+      "icon_id": "11867435",
+      "name": "navAppChart",
+      "font_class": "navAppChart",
+      "unicode": "e519",
+      "unicode_decimal": 58649
+    },
+    {
+      "icon_id": "11867436",
+      "name": "componentSys",
+      "font_class": "componentSys",
+      "unicode": "e51a",
+      "unicode_decimal": 58650
+    },
+    {
+      "icon_id": "11867437",
+      "name": "method",
+      "font_class": "method",
+      "unicode": "e51b",
+      "unicode_decimal": 58651
+    },
+    {
+      "icon_id": "11867438",
+      "name": "navNetRequest",
+      "font_class": "navNetRequest",
+      "unicode": "e51c",
+      "unicode_decimal": 58652
+    },
+    {
+      "icon_id": "11867439",
+      "name": "navApp",
+      "font_class": "navApp",
+      "unicode": "e51d",
+      "unicode_decimal": 58653
+    },
+    {
+      "icon_id": "11867440",
+      "name": "navLogQuery",
+      "font_class": "navLogQuery",
+      "unicode": "e51f",
+      "unicode_decimal": 58655
+    },
+    {
+      "icon_id": "11867441",
+      "name": "navCataChart",
+      "font_class": "navCataChart",
+      "unicode": "e520",
+      "unicode_decimal": 58656
+    },
+    {
+      "icon_id": "11867442",
+      "name": "navPublicCollect",
+      "font_class": "navPublicCollect",
+      "unicode": "e521",
+      "unicode_decimal": 58657
+    },
+    {
+      "icon_id": "11867443",
+      "name": "navDocs",
+      "font_class": "navDocs",
+      "unicode": "e522",
+      "unicode_decimal": 58658
+    },
+    {
+      "icon_id": "11867444",
+      "name": "payment",
+      "font_class": "payment",
+      "unicode": "e523",
+      "unicode_decimal": 58659
+    },
+    {
+      "icon_id": "11867445",
+      "name": "navPageMonitor",
+      "font_class": "navPageMonitor",
+      "unicode": "e524",
+      "unicode_decimal": 58660
+    },
+    {
+      "icon_id": "11867446",
+      "name": "realTime",
+      "font_class": "realTime",
+      "unicode": "e525",
+      "unicode_decimal": 58661
+    },
+    {
+      "icon_id": "11867447",
+      "name": "service",
+      "font_class": "service",
+      "unicode": "e526",
+      "unicode_decimal": 58662
+    },
+    {
+      "icon_id": "11867448",
+      "name": "navMyCollect",
+      "font_class": "navMyCollect",
+      "unicode": "e527",
+      "unicode_decimal": 58663
+    },
+    {
+      "icon_id": "11867449",
+      "name": "navSys",
+      "font_class": "navSys",
+      "unicode": "e528",
+      "unicode_decimal": 58664
+    },
+    {
+      "icon_id": "11867450",
+      "name": "navOperators",
+      "font_class": "navOperators",
+      "unicode": "e529",
+      "unicode_decimal": 58665
+    },
+    {
+      "icon_id": "11867451",
+      "name": "security",
+      "font_class": "security",
+      "unicode": "e52a",
+      "unicode_decimal": 58666
+    },
+    {
+      "icon_id": "11867452",
+      "name": "set",
+      "font_class": "set",
+      "unicode": "e52b",
+      "unicode_decimal": 58667
+    },
+    {
+      "icon_id": "11867453",
+      "name": "transaction",
+      "font_class": "transaction",
+      "unicode": "e52c",
+      "unicode_decimal": 58668
+    },
+    {
+      "icon_id": "11867454",
+      "name": "other",
+      "font_class": "other",
+      "unicode": "e52d",
+      "unicode_decimal": 58669
+    },
+    {
+      "icon_id": "11867455",
+      "name": "upgrade",
+      "font_class": "upgrade",
+      "unicode": "e52e",
+      "unicode_decimal": 58670
+    },
+    {
+      "icon_id": "11867456",
+      "name": "userBehavior",
+      "font_class": "userBehavior",
+      "unicode": "e52f",
+      "unicode_decimal": 58671
+    },
+    {
+      "icon_id": "11867457",
+      "name": "area",
+      "font_class": "area",
+      "unicode": "e530",
+      "unicode_decimal": 58672
+    },
+    {
+      "icon_id": "11867458",
+      "name": "shoppingCart",
+      "font_class": "shoppingCart",
+      "unicode": "e531",
+      "unicode_decimal": 58673
+    },
+    {
+      "icon_id": "11867459",
+      "name": "navAPI",
+      "font_class": "navAPI",
+      "unicode": "e532",
+      "unicode_decimal": 58674
+    }
+  ]
+}

@@ -11,9 +11,23 @@ import './index.less'
 import '@/assets/icons/iconfont.css'
 import routes from "./router";
 import VueRouter from "vue-router";
+import '@/components/resource/fonts'
 
 
-// 实际打包时应该不引入mock
+// 加载系统配置
+let sysMainframeInfo = {};
+try {
+  const sysConfig = require('@/settings.js')
+  if (sysConfig) {
+    sysMainframeInfo = sysConfig['SYS_MAINFRAME_INFO'] || {}
+  }
+} catch (e) {
+  console.warn(e)
+} finally {
+  Vue.prototype.$sysMainFrameInfo = Object.assign({
+    APP_NAME: '子系统模板',
+  }, sysMainframeInfo)
+}
 /* eslint-disable */
 
 Vue.config.productionTip = false

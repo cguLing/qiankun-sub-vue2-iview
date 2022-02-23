@@ -1,0 +1,8 @@
+import './logo/iconfont.css'
+import './main/iconfont.css'
+import './sgm/iconfont.css'
+import './digger/iconfont.css'
+import './dnp/iconfont.css'
+import './r2m/iconfont.css'
+import './uwc/iconfont.css'
+import './jec/iconfont.css'

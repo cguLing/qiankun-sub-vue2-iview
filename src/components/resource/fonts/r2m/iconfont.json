@@ -1,0 +1,198 @@
+{
+  "id": "1356599",
+  "name": "R2M",
+  "font_family": "font_family",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10850107",
+      "name": "appAll",
+      "font_class": "appAll",
+      "unicode": "e5dc",
+      "unicode_decimal": 58844
+    },
+    {
+      "icon_id": "10850108",
+      "name": "addNode",
+      "font_class": "addNode",
+      "unicode": "e5dd",
+      "unicode_decimal": 58845
+    },
+    {
+      "icon_id": "10850109",
+      "name": "colonyParameter",
+      "font_class": "colonyParameter",
+      "unicode": "e5de",
+      "unicode_decimal": 58846
+    },
+    {
+      "icon_id": "10850110",
+      "name": "appParameters",
+      "font_class": "appParameters",
+      "unicode": "e5df",
+      "unicode_decimal": 58847
+    },
+    {
+      "icon_id": "10850111",
+      "name": "batchAdjustCapacity",
+      "font_class": "batchAdjustCapacity",
+      "unicode": "e5e0",
+      "unicode_decimal": 58848
+    },
+    {
+      "icon_id": "10850114",
+      "name": "editMemory",
+      "font_class": "editMemory",
+      "unicode": "e5e3",
+      "unicode_decimal": 58851
+    },
+    {
+      "icon_id": "10850115",
+      "name": "consloe",
+      "font_class": "consloe",
+      "unicode": "e5e4",
+      "unicode_decimal": 58852
+    },
+    {
+      "icon_id": "10850116",
+      "name": "expansionOrder",
+      "font_class": "expansionOrder",
+      "unicode": "e5e5",
+      "unicode_decimal": 58853
+    },
+    {
+      "icon_id": "10850119",
+      "name": "dataMigration",
+      "font_class": "dataMigration",
+      "unicode": "e5e8",
+      "unicode_decimal": 58856
+    },
+    {
+      "icon_id": "10850120",
+      "name": "multiRoom",
+      "font_class": "multiRoom",
+      "unicode": "e5e9",
+      "unicode_decimal": 58857
+    },
+    {
+      "icon_id": "10850122",
+      "name": "oneTouch",
+      "font_class": "oneTouch",
+      "unicode": "e5eb",
+      "unicode_decimal": 58859
+    },
+    {
+      "icon_id": "10850123",
+      "name": "nodeInfo",
+      "font_class": "nodeInfo",
+      "unicode": "e5ec",
+      "unicode_decimal": 58860
+    },
+    {
+      "icon_id": "10850124",
+      "name": "navApp",
+      "font_class": "navApp",
+      "unicode": "e5ed",
+      "unicode_decimal": 58861
+    },
+    {
+      "icon_id": "10850126",
+      "name": "noteStatistics",
+      "font_class": "noteStatistics",
+      "unicode": "e5ee",
+      "unicode_decimal": 58862
+    },
+    {
+      "icon_id": "10850127",
+      "name": "delOrder",
+      "font_class": "delOrder",
+      "unicode": "e5ef",
+      "unicode_decimal": 58863
+    },
+    {
+      "icon_id": "10850128",
+      "name": "openOrder",
+      "font_class": "openOrder",
+      "unicode": "e5f0",
+      "unicode_decimal": 58864
+    },
+    {
+      "icon_id": "10850130",
+      "name": "roomSwitching",
+      "font_class": "roomSwitching",
+      "unicode": "e5f2",
+      "unicode_decimal": 58866
+    },
+    {
+      "icon_id": "10850131",
+      "name": "otherOrder",
+      "font_class": "otherOrder",
+      "unicode": "e5f3",
+      "unicode_decimal": 58867
+    },
+    {
+      "icon_id": "10850132",
+      "name": "zk",
+      "font_class": "zk",
+      "unicode": "e5f4",
+      "unicode_decimal": 58868
+    },
+    {
+      "icon_id": "10850133",
+      "name": "redis",
+      "font_class": "redis",
+      "unicode": "e5f5",
+      "unicode_decimal": 58869
+    },
+    {
+      "icon_id": "10850134",
+      "name": "personM",
+      "font_class": "personM",
+      "unicode": "e5f6",
+      "unicode_decimal": 58870
+    },
+    {
+      "icon_id": "10851447",
+      "name": "clusterM",
+      "font_class": "clusterM",
+      "unicode": "e5f9",
+      "unicode_decimal": 58873
+    },
+    {
+      "icon_id": "10851448",
+      "name": "machineM",
+      "font_class": "machineM",
+      "unicode": "e5fa",
+      "unicode_decimal": 58874
+    },
+    {
+      "icon_id": "10938037",
+      "name": "down",
+      "font_class": "down",
+      "unicode": "e5fd",
+      "unicode_decimal": 58877
+    },
+    {
+      "icon_id": "10938038",
+      "name": "up",
+      "font_class": "up",
+      "unicode": "e5fe",
+      "unicode_decimal": 58878
+    },
+    {
+      "icon_id": "10938039",
+      "name": "appName",
+      "font_class": "appName",
+      "unicode": "e5ff",
+      "unicode_decimal": 58879
+    },
+    {
+      "icon_id": "11096062",
+      "name": "sysStatistics",
+      "font_class": "sysStatistics",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

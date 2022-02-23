@@ -1,0 +1,366 @@
+{
+  "id": "1383439",
+  "name": "dnp",
+  "font_family": "font_family",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10684307",
+      "name": "deviceModel",
+      "font_class": "deviceModel",
+      "unicode": "ebb8",
+      "unicode_decimal": 60344
+    },
+    {
+      "icon_id": "10684310",
+      "name": "Array",
+      "font_class": "Array",
+      "unicode": "ebc3",
+      "unicode_decimal": 60355
+    },
+    {
+      "icon_id": "10684312",
+      "name": "dell",
+      "font_class": "dell",
+      "unicode": "ebc5",
+      "unicode_decimal": 60357
+    },
+    {
+      "icon_id": "10684314",
+      "name": "assetsInfo",
+      "font_class": "assetsInfo",
+      "unicode": "ebc7",
+      "unicode_decimal": 60359
+    },
+    {
+      "icon_id": "10684315",
+      "name": "computerManage",
+      "font_class": "computerManage",
+      "unicode": "ebc8",
+      "unicode_decimal": 60360
+    },
+    {
+      "icon_id": "10684316",
+      "name": "alarmUnit",
+      "font_class": "alarmUnit",
+      "unicode": "ebc9",
+      "unicode_decimal": 60361
+    },
+    {
+      "icon_id": "10684317",
+      "name": "areaManage",
+      "font_class": "areaManage",
+      "unicode": "ebca",
+      "unicode_decimal": 60362
+    },
+    {
+      "icon_id": "10684318",
+      "name": "equipmentName",
+      "font_class": "equipmentName",
+      "unicode": "ebcb",
+      "unicode_decimal": 60363
+    },
+    {
+      "icon_id": "10684319",
+      "name": "critical",
+      "font_class": "critical",
+      "unicode": "ebcc",
+      "unicode_decimal": 60364
+    },
+    {
+      "icon_id": "10684320",
+      "name": "construction",
+      "font_class": "construction",
+      "unicode": "ebcd",
+      "unicode_decimal": 60365
+    },
+    {
+      "icon_id": "10684321",
+      "name": "DataDictionary",
+      "font_class": "DataDictionary",
+      "unicode": "ebce",
+      "unicode_decimal": 60366
+    },
+    {
+      "icon_id": "10684322",
+      "name": "bankType",
+      "font_class": "bankType",
+      "unicode": "ebcf",
+      "unicode_decimal": 60367
+    },
+    {
+      "icon_id": "10684323",
+      "name": "disposalidea",
+      "font_class": "disposalidea",
+      "unicode": "ebd0",
+      "unicode_decimal": 60368
+    },
+    {
+      "icon_id": "10684325",
+      "name": "ip",
+      "font_class": "ip",
+      "unicode": "ebd2",
+      "unicode_decimal": 60370
+    },
+    {
+      "icon_id": "10684326",
+      "name": "cisco",
+      "font_class": "cisco",
+      "unicode": "ebd3",
+      "unicode_decimal": 60371
+    },
+    {
+      "icon_id": "10684328",
+      "name": "navLogAlert",
+      "font_class": "navLogAlert",
+      "unicode": "ebbb",
+      "unicode_decimal": 60347
+    },
+    {
+      "icon_id": "10684329",
+      "name": "huawei",
+      "font_class": "huawei",
+      "unicode": "ebd5",
+      "unicode_decimal": 60373
+    },
+    {
+      "icon_id": "10684331",
+      "name": "hc",
+      "font_class": "hc",
+      "unicode": "ebd7",
+      "unicode_decimal": 60375
+    },
+    {
+      "icon_id": "10684334",
+      "name": "deviceType",
+      "font_class": "deviceType",
+      "unicode": "ebda",
+      "unicode_decimal": 60378
+    },
+    {
+      "icon_id": "10684336",
+      "name": "juniper",
+      "font_class": "juniper",
+      "unicode": "ebdc",
+      "unicode_decimal": 60380
+    },
+    {
+      "icon_id": "10684337",
+      "name": "equipment",
+      "font_class": "equipment",
+      "unicode": "ebdd",
+      "unicode_decimal": 60381
+    },
+    {
+      "icon_id": "10684339",
+      "name": "navPublic",
+      "font_class": "navPublic",
+      "unicode": "ebdf",
+      "unicode_decimal": 60383
+    },
+    {
+      "icon_id": "10684340",
+      "name": "nothing",
+      "font_class": "nothing",
+      "unicode": "ebe0",
+      "unicode_decimal": 60384
+    },
+    {
+      "icon_id": "10684341",
+      "name": "personM",
+      "font_class": "personM",
+      "unicode": "ebe1",
+      "unicode_decimal": 60385
+    },
+    {
+      "icon_id": "10684343",
+      "name": "f",
+      "font_class": "f",
+      "unicode": "ebe3",
+      "unicode_decimal": 60387
+    },
+    {
+      "icon_id": "10684348",
+      "name": "navTopo",
+      "font_class": "navTopo",
+      "unicode": "ebc2",
+      "unicode_decimal": 60354
+    },
+    {
+      "icon_id": "10684349",
+      "name": "flow",
+      "font_class": "flow",
+      "unicode": "ebe8",
+      "unicode_decimal": 60392
+    },
+    {
+      "icon_id": "10684350",
+      "name": "endEquipment",
+      "font_class": "endEquipment",
+      "unicode": "ebe9",
+      "unicode_decimal": 60393
+    },
+    {
+      "icon_id": "10684351",
+      "name": "hp",
+      "font_class": "hp",
+      "unicode": "ebea",
+      "unicode_decimal": 60394
+    },
+    {
+      "icon_id": "10684354",
+      "name": "mapping",
+      "font_class": "mapping",
+      "unicode": "ebed",
+      "unicode_decimal": 60397
+    },
+    {
+      "icon_id": "10684355",
+      "name": "Thread",
+      "font_class": "Thread",
+      "unicode": "ebee",
+      "unicode_decimal": 60398
+    },
+    {
+      "icon_id": "10684356",
+      "name": "navPrivate",
+      "font_class": "navPrivate",
+      "unicode": "ebef",
+      "unicode_decimal": 60399
+    },
+    {
+      "icon_id": "10684359",
+      "name": "switchType",
+      "font_class": "switchType",
+      "unicode": "ebf2",
+      "unicode_decimal": 60402
+    },
+    {
+      "icon_id": "10684361",
+      "name": "matchRules",
+      "font_class": "matchRules",
+      "unicode": "ebf3",
+      "unicode_decimal": 60403
+    },
+    {
+      "icon_id": "10684364",
+      "name": "message",
+      "font_class": "message",
+      "unicode": "ebf6",
+      "unicode_decimal": 60406
+    },
+    {
+      "icon_id": "10684365",
+      "name": "navMonitorConf",
+      "font_class": "navMonitorConf",
+      "unicode": "ebc0",
+      "unicode_decimal": 60352
+    },
+    {
+      "icon_id": "10684367",
+      "name": "Secondary",
+      "font_class": "Secondary",
+      "unicode": "ebf7",
+      "unicode_decimal": 60407
+    },
+    {
+      "icon_id": "10684368",
+      "name": "unmatchedLogs",
+      "font_class": "unmatchedLogs",
+      "unicode": "ebf8",
+      "unicode_decimal": 60408
+    },
+    {
+      "icon_id": "10684369",
+      "name": "netentsec",
+      "font_class": "netentsec",
+      "unicode": "ebf9",
+      "unicode_decimal": 60409
+    },
+    {
+      "icon_id": "10684370",
+      "name": "notification",
+      "font_class": "notification",
+      "unicode": "ebfa",
+      "unicode_decimal": 60410
+    },
+    {
+      "icon_id": "10684371",
+      "name": "to",
+      "font_class": "to",
+      "unicode": "ebfb",
+      "unicode_decimal": 60411
+    },
+    {
+      "icon_id": "10684372",
+      "name": "other",
+      "font_class": "other",
+      "unicode": "ebfc",
+      "unicode_decimal": 60412
+    },
+    {
+      "icon_id": "10684373",
+      "name": "friendlyField",
+      "font_class": "friendlyField",
+      "unicode": "ebfd",
+      "unicode_decimal": 60413
+    },
+    {
+      "icon_id": "10684374",
+      "name": "navCollect",
+      "font_class": "navCollect",
+      "unicode": "ebbe",
+      "unicode_decimal": 60350
+    },
+    {
+      "icon_id": "10684375",
+      "name": "vendorConfiguration",
+      "font_class": "vendorConfiguration",
+      "unicode": "ebfe",
+      "unicode_decimal": 60414
+    },
+    {
+      "icon_id": "10684376",
+      "name": "pauseAlarm",
+      "font_class": "pauseAlarm",
+      "unicode": "ebff",
+      "unicode_decimal": 60415
+    },
+    {
+      "icon_id": "10684377",
+      "name": "navThreadConf",
+      "font_class": "navThreadConf",
+      "unicode": "ebbf",
+      "unicode_decimal": 60351
+    },
+    {
+      "icon_id": "10684378",
+      "name": "deviceRole",
+      "font_class": "deviceRole",
+      "unicode": "ec00",
+      "unicode_decimal": 60416
+    },
+    {
+      "icon_id": "10684379",
+      "name": "networkInfo",
+      "font_class": "networkInfo",
+      "unicode": "ec01",
+      "unicode_decimal": 60417
+    },
+    {
+      "icon_id": "10966240",
+      "name": "filteringRules",
+      "font_class": "filteringRules",
+      "unicode": "ebd6",
+      "unicode_decimal": 60374
+    },
+    {
+      "icon_id": "11212008",
+      "name": "peakValue",
+      "font_class": "peakValue",
+      "unicode": "ebd8",
+      "unicode_decimal": 60376
+    }
+  ]
+}

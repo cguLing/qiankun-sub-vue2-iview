@@ -3,7 +3,7 @@
     <Card>
       <Row style="margin-top: 15px">
         <i-col span='7'>
-          <p class="left">用户名</p>
+          <p class="left">用户名yyy</p>
           <Input suffix="ios-search" v-model.trim='searchForm.name' style="width: 300px" ></Input>
         </i-col>
         <i-col span='3·调4润而为起a see wa q'>

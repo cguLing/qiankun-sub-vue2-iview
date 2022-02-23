@@ -1,0 +1,170 @@
+{
+  "id": "1560594",
+  "name": "dting",
+  "font_family": "font_family",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12295144",
+      "name": "active",
+      "font_class": "active",
+      "unicode": "e194",
+      "unicode_decimal": 57748
+    },
+    {
+      "icon_id": "12295147",
+      "name": "connected",
+      "font_class": "connected",
+      "unicode": "e195",
+      "unicode_decimal": 57749
+    },
+    {
+      "icon_id": "12295148",
+      "name": "critical",
+      "font_class": "critical",
+      "unicode": "e196",
+      "unicode_decimal": 57750
+    },
+    {
+      "icon_id": "12295151",
+      "name": "emergency",
+      "font_class": "emergency",
+      "unicode": "e197",
+      "unicode_decimal": 57751
+    },
+    {
+      "icon_id": "12295152",
+      "name": "alarmHistory",
+      "font_class": "alarmHistory",
+      "unicode": "e198",
+      "unicode_decimal": 57752
+    },
+    {
+      "icon_id": "12295153",
+      "name": "CPU",
+      "font_class": "CPU",
+      "unicode": "e199",
+      "unicode_decimal": 57753
+    },
+    {
+      "icon_id": "12295154",
+      "name": "handle",
+      "font_class": "handle",
+      "unicode": "e19a",
+      "unicode_decimal": 57754
+    },
+    {
+      "icon_id": "12295155",
+      "name": "IO",
+      "font_class": "IO",
+      "unicode": "e19b",
+      "unicode_decimal": 57755
+    },
+    {
+      "icon_id": "12295156",
+      "name": "disk",
+      "font_class": "disk",
+      "unicode": "e19c",
+      "unicode_decimal": 57756
+    },
+    {
+      "icon_id": "12295157",
+      "name": "host",
+      "font_class": "host",
+      "unicode": "e19d",
+      "unicode_decimal": 57757
+    },
+    {
+      "icon_id": "12295158",
+      "name": "process-08",
+      "font_class": "process-",
+      "unicode": "e19e",
+      "unicode_decimal": 57758
+    },
+    {
+      "icon_id": "12295159",
+      "name": "alarm",
+      "font_class": "alarm",
+      "unicode": "e19f",
+      "unicode_decimal": 57759
+    },
+    {
+      "icon_id": "12295160",
+      "name": "hostList",
+      "font_class": "hostList",
+      "unicode": "e1a0",
+      "unicode_decimal": 57760
+    },
+    {
+      "icon_id": "12295162",
+      "name": "load",
+      "font_class": "load",
+      "unicode": "e1a1",
+      "unicode_decimal": 57761
+    },
+    {
+      "icon_id": "12295163",
+      "name": "MEM",
+      "font_class": "MEM",
+      "unicode": "e1a2",
+      "unicode_decimal": 57762
+    },
+    {
+      "icon_id": "12295164",
+      "name": "rule",
+      "font_class": "rule",
+      "unicode": "e1a3",
+      "unicode_decimal": 57763
+    },
+    {
+      "icon_id": "12295165",
+      "name": "process-30",
+      "font_class": "process-1",
+      "unicode": "e1a4",
+      "unicode_decimal": 57764
+    },
+    {
+      "icon_id": "12295166",
+      "name": "snmp",
+      "font_class": "snmp",
+      "unicode": "e1a5",
+      "unicode_decimal": 57765
+    },
+    {
+      "icon_id": "12295167",
+      "name": "networkCard",
+      "font_class": "networkCard",
+      "unicode": "e1a6",
+      "unicode_decimal": 57766
+    },
+    {
+      "icon_id": "12295168",
+      "name": "shield",
+      "font_class": "shield",
+      "unicode": "e1a7",
+      "unicode_decimal": 57767
+    },
+    {
+      "icon_id": "12295169",
+      "name": "socket",
+      "font_class": "socket",
+      "unicode": "e1a8",
+      "unicode_decimal": 57768
+    },
+    {
+      "icon_id": "12295170",
+      "name": "warning",
+      "font_class": "warning",
+      "unicode": "e1a9",
+      "unicode_decimal": 57769
+    },
+    {
+      "icon_id": "12295171",
+      "name": "NTP",
+      "font_class": "NTP",
+      "unicode": "e1aa",
+      "unicode_decimal": 57770
+    }
+  ]
+}

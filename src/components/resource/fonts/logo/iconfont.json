@@ -1,0 +1,114 @@
+{
+  "id": "1517109",
+  "name": "项目LOGO",
+  "font_family": "font_family",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14546760",
+      "name": "sgm",
+      "font_class": "sgm",
+      "unicode": "e109",
+      "unicode_decimal": 57609
+    },
+    {
+      "icon_id": "14546532",
+      "name": "digger",
+      "font_class": "digger",
+      "unicode": "e102",
+      "unicode_decimal": 57602
+    },
+    {
+      "icon_id": "14322448",
+      "name": "r2m",
+      "font_class": "r2m",
+      "unicode": "e10d",
+      "unicode_decimal": 57613
+    },
+    {
+      "icon_id": "9911326",
+      "name": "defaultLogo",
+      "font_class": "defaultLogo",
+      "unicode": "e100",
+      "unicode_decimal": 57600
+    },
+    {
+      "icon_id": "9911336",
+      "name": "concrete",
+      "font_class": "concrete",
+      "unicode": "e101",
+      "unicode_decimal": 57601
+    },
+    {
+      "icon_id": "9911347",
+      "name": "diting",
+      "font_class": "diting",
+      "unicode": "e103",
+      "unicode_decimal": 57603
+    },
+    {
+      "icon_id": "9911352",
+      "name": "dnp",
+      "font_class": "dnp",
+      "unicode": "e104",
+      "unicode_decimal": 57604
+    },
+    {
+      "icon_id": "9911372",
+      "name": "jes",
+      "font_class": "jes",
+      "unicode": "e105",
+      "unicode_decimal": 57605
+    },
+    {
+      "icon_id": "9911377",
+      "name": "jsf",
+      "font_class": "jsf",
+      "unicode": "e106",
+      "unicode_decimal": 57606
+    },
+    {
+      "icon_id": "9911385",
+      "name": "rcs",
+      "font_class": "rcs",
+      "unicode": "e107",
+      "unicode_decimal": 57607
+    },
+    {
+      "icon_id": "9911388",
+      "name": "mqcloud",
+      "font_class": "mqcloud",
+      "unicode": "e9",
+      "unicode_decimal": 233
+    },
+    {
+      "icon_id": "9911403",
+      "name": "titans",
+      "font_class": "titans",
+      "unicode": "e108",
+      "unicode_decimal": 57608
+    },
+    {
+      "icon_id": "9911413",
+      "name": "uwc",
+      "font_class": "uwc",
+      "unicode": "e10a",
+      "unicode_decimal": 57610
+    },
+    {
+      "icon_id": "11220196",
+      "name": "sgm-console-web",
+      "font_class": "sgm-console-web",
+      "unicode": "e10b",
+      "unicode_decimal": 57611
+    },
+    {
+      "icon_id": "11220197",
+      "name": "sgm-console-mobile",
+      "font_class": "sgm-console-mobile",
+      "unicode": "e10c",
+      "unicode_decimal": 57612
+    }
+  ]
+}

@@ -10,13 +10,15 @@ const routes =  [
     meta: {
       hideInBread: true,
     },
+    name: 'home',
     component: Main,
     children: [
       {
-        path: '',
+        path: '/dept',
         name: 'dept',
+        hide: false,
         meta: {
-          icon: 'ios-navigate',
+          icon: 'logo-windows',
           title: '业务部门负责人'
         },
         component: () => import('@/view/dept/index.vue')
@@ -31,7 +33,7 @@ const routes =  [
     component: Main,
     children: [
       {
-        path: '',
+        path: '/project',
         name: 'project',
         meta: {
           icon: 'ios-navigate',
@@ -49,10 +51,10 @@ const routes =  [
     component: Main,
     children: [
       {
-        path: '',
+        path: '/service',
         name: 'service',
         meta: {
-          icon: 'ios-navigate',
+          icon: 'icon-toTables',
           title: '服务'
         },
         component: () => import('@/view/service/index.vue')
