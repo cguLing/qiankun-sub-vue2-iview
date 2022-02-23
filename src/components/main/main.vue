@@ -1,14 +1,5 @@
 <template>
-  <Layout style="height: 100%" class="layout-body">
-    <Sider
-      class="sider-bar-base"
-      ref="siderProductBar"
-      v-model="collapsed"
-      hide-trigger
-      collapsible
-      :collapsed-width="50"
-      :width="200"
-    ></Sider>
+  <Layout style="height: 100%;" class="layout-body">
     <div class="sider-bar left">
       <Sider
         class="sider-menu-bar"
@@ -26,8 +17,8 @@
       </Sider>
     </div>
     <Layout>
-      <Content class="main-content-con">
-        <Layout class="main-layout-con">
+      <Content class="content-con">
+        <Layout class="layout-con">
           <Content class="content-wrapper">
               <router-view/>
           </Content>
