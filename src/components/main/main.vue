@@ -91,6 +91,8 @@ export default {
     handleTabRemove (name) {
       let list = this.tagNavList.filter(item => item.name!==name)
       this.setTagNavList(list)
+      let nextName = this.tagNavList[this.tagNavList.length-1].name
+      this.$router.push({ name: nextName })
     }
   },
   watch: {
