@@ -43,24 +43,30 @@ export default {
   },
   methods: {
     sysGetMenus () {
-      let result = this.getMenuName(this.menuList)
+      let result = this.getMenuName(this.menuList, 0)
       this.menuNames = result.Name
       this.menuLists = result.Menu
+      console.log(result)
       this.expandSideMenu()
     },
-    getMenuName (menus, result = {Name: [], Menu: []}) {
+    getMenuName (menus, level, result = {Name: [], Menu: []}) {
       menus.forEach(value => {
         if (value.meta['layout']){
           if (value.children) {
             result.Menu=result.Menu.concat(value.children)
-            this.getMenuName(value.children, result)
+            this.getMenuName(value.children, 1, result)
           }
         } else {
-          result.Name.push(value.name)
+          if(level==0){
+            result.Menu=result.Menu.concat(value)
+          }else{
+            if(value.name!='/') result.Name.push(value.name)
+          }
           if (value.children) {
-            this.getMenuName(value.children, result)
+            this.getMenuName(value.children, 1, result)
           }
         }
+
       })
       return result
     },
