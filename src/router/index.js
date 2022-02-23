@@ -10,7 +10,7 @@ const routes =  [
     name: '/',
     redirect: '/home',
     meta: {
-      hideInBread: true,
+      layout: true,
     },
     component: Main,
     children: [
@@ -19,7 +19,7 @@ const routes =  [
         name: 'home',
         meta: {
           hideInMenu: true,
-          hideInBread: true,
+          layout: true,
           title: '首页'
         },
       },
@@ -38,7 +38,7 @@ const routes =  [
   {
     path: '/project',
     meta: {
-      hideInBread: true,
+      layout: true,
     },
     component: Main,
     children: [
@@ -56,7 +56,7 @@ const routes =  [
   {
     path: '/service',
     meta: {
-      hideInBread: true,
+      layout: true,
     },
     component: Main,
     children: [

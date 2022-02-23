@@ -50,9 +50,11 @@ export default {
     },
     getMenuName (menus, result = {Name: [], Menu: []}) {
       menus.forEach(value => {
-        if (value.children) {
-          result.Menu=result.Menu.concat(value.children)
-          // this.getMenuName(value.children, result)
+        if (value.meta['layout']){
+          if (value.children) {
+            result.Menu=result.Menu.concat(value.children)
+            this.getMenuName(value.children, result)
+          }
         } else {
           result.Name.push(value.name)
           if (value.children) {
@@ -83,11 +85,11 @@ export default {
           break
         } else this.activeName = ''
       }
-      // this.$nextTick(() => {
-      //   const _systemMenu = this.$refs.systemMenu
-      //   _systemMenu.updateOpened()
-      //   _systemMenu.updateActiveName()
-      // })
+      this.$nextTick(() => {
+        const _systemMenu = this.$refs.systemMenu
+        _systemMenu.updateOpened()
+        _systemMenu.updateActiveName()
+      })
     }
   },
   watch: {
