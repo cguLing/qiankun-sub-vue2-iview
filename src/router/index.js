@@ -88,6 +88,21 @@ const routes =  [
       title: '操作文档',
       target: 'link'
     }
+  },
+  {
+    path: '/404',
+    meta: {
+      layout: true,
+    },
+    component: () => import('@/view/error/404/index.vue')
+  },
+  {
+    path: '*',
+    name: '*',
+    redirect: '/404',
+    meta: {
+      layout: true,
+    }
   }
 ]
 
