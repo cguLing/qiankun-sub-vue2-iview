@@ -46,7 +46,6 @@ export default {
       let result = this.getMenuName(this.menuList, 0)
       this.menuNames = result.Name
       this.menuLists = result.Menu
-      console.log(result)
       this.expandSideMenu()
     },
     getMenuName (menus, level, result = {Name: [], Menu: []}) {
@@ -70,8 +69,10 @@ export default {
       })
       return result
     },
-    selectToRouterMain (name, target) {
-      if (target === '_blank' || target === '_top') {
+    selectToRouterMain (path, name, target) {
+      if(target === 'link'){
+        window.open(path, '_blank')
+      }else if (target === '_blank' || target === '_top') {
         let { href } = this.$router.resolve({
           name: name
         })

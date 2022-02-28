@@ -2,14 +2,22 @@
     <div :class="'menu-level-'+level">
         <template v-for="item in menuList" >
             <template>
-                <Menu-item v-if="!item.children" v-show="!item.meta.hideInMenu" :name="item.name" :key="item.name" @click.native="selectToRouterMain(item.name, item.target)">
+                <Menu-item
+                    v-if="!item.children"
+                    v-show="!item.meta.hideInMenu"
+                    :name="item.name" :key="item.name"
+                    @click.native="selectToRouterMain(item.path, item.name, item.meta.target)">
                     <span>
                         <!-- <myIcon v-if="level==0" :type="item.icon||'icon-defaultLogo'"/> -->
                         <Icon v-if="level==0" :type="item.icon.includes('icon-')?'':item.icon" :custom="item.icon.includes('icon-')?('font_family icon-defaultLogo '+item.icon||''):''" size="18"/>
                         {{item.meta['title']?item.meta.title:item.name}}
                     </span>
                 </Menu-item>
-                <Submenu v-if="item.children" v-show="!item.meta.hideInMenu" :name="item.name" :key="item.name" @click.native="selectToRouterMain(item.name, item.target)">
+                <Submenu
+                    v-if="item.children"
+                    v-show="!item.meta.hideInMenu"
+                    :name="item.name" :key="item.name"
+                    @click.native="selectToRouterMain(item.path, item.name, item.meta.target)">
                     <template slot="title">
                         <span>
                             <!-- <myIcon v-if="level==0" :type="item.icon||'icon-defaultLogo'"/> -->

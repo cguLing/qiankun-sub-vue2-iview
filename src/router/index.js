@@ -54,22 +54,40 @@ const routes =  [
     ]
   },
   {
-    path: '/service',
+    path: '/myConnect',
+    name: 'myConnect',
     meta: {
-      layout: true,
+      icon: 'ios-bookmarks',
+      title: '我的服务'
     },
     component: Main,
     children: [
       {
-        path: '/service',
-        name: 'service',
+        path: '/myConnect/IDC',
+        name: 'myConnect_IDC',
         meta: {
-          icon: 'icon-toTables',
-          title: '服务'
+          title: '服务1'
+        },
+        component: () => import('@/view/service/index.vue')
+      },
+      {
+        path: '/myConnect/IT',
+        name: 'myConnect_IT',
+        meta: {
+          title: '服务2'
         },
         component: () => import('@/view/service/index.vue')
       }
     ]
+  },
+  {
+    path: 'https://www.baidu.com/',
+    name: 'doc',
+    meta: {
+      icon: 'ios-navigate',
+      title: '操作文档',
+      target: 'link'
+    }
   }
 ]
 
