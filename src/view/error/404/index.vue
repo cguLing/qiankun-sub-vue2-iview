@@ -1,13 +1,17 @@
 <template>
-  <Row style="height:100%">
+  <Row class="back">
     <Col span="12" style="height:100%">
-      <Row class="parent">
-        <div class="ship">
-          <img :src="alien_ship" alt="" width="300" >
+      <Row type="flex" justify="end" style="position: relative;top:15%">
+        <Col span="12">
+        <div class="parent">
+          <div class="ship">
+            <img :src="alien_ship" alt="" width="300" >
+          </div>
+          <div class="conversation">
+            <img :src="conversation" alt="" width="330" >
+          </div>
         </div>
-        <div class="conversation">
-          <img :src="conversation" alt="" width="330" >
-        </div>
+        </Col>
       </Row>
     </Col>
     <Col span="12" style="height:100%">
@@ -42,20 +46,25 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+  .back{
+    height: 100%;
+    background: url('../../../assets/images/error-page/background-404.jpg') no-repeat center fixed;     
+    background-size: cover;
+  }
   .parent {
     position:relative;
     height: 100%;
-    top: 10%;
     .ship {
       position:absolute;
-      top: 160px;
+      top: 180px;
+      right:300px;
       // left: 50%;
       // display: inline-block;
     }
     .conversation{
       position:absolute;
       // top: 20%;
-      left:200px;
+      right: 80px;
       // display: inline-block;
     }
   }
@@ -65,7 +74,7 @@ export default {
     float: left;
     width: 300px;
     padding: 30px 0;
-    top: 20%;
+    top: 25%;
     overflow: hidden;
     &__oops {
       font-size: 32px;
@@ -81,7 +90,7 @@ export default {
     &__headline {
       font-size: 20px;
       line-height: 24px;
-      color: #222;
+      color: #fff;
       font-weight: bold;
       opacity: 0;
       margin-bottom: 10px;
@@ -93,7 +102,7 @@ export default {
     &__info {
       font-size: 13px;
       line-height: 21px;
-      color: grey;
+      color: rgb(168, 168, 168);
       opacity: 0;
       margin-bottom: 30px;
       animation-name: slideUp;
