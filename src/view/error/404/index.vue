@@ -1,6 +1,6 @@
 <template>
   <Row class="back">
-    <Col span="12" style="height:100%">
+    <Col span="13" style="height:100%">
       <Row type="flex" justify="end" style="position: relative;top:15%">
         <Col span="12">
         <div class="parent">
@@ -14,7 +14,7 @@
         </Col>
       </Row>
     </Col>
-    <Col span="12" style="height:100%">
+    <Col span="11" style="height:100%">
       <div class="bullshit">
         <div class="bullshit__oops">OOPS!</div>
         <div class="bullshit__headline">{{ message }}</div>
