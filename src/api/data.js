@@ -1,5 +1,5 @@
 /* eslint-disable */
-import axios from '@/libs/api.request'
+import axios from '@/libs/axios'
 
 // 获取动态
 export const getMockMenuData = () => {

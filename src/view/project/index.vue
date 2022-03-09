@@ -1,5 +1,5 @@
 <template>
-  <div class="list">
+  <div>
     <Card>
       <Row style="margin-top: 15px">
         <i-col span='7'>

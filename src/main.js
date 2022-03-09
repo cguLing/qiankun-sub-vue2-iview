@@ -4,7 +4,7 @@
 import './public-path'
 import Vue from 'vue'
 import App from './App'
-import store from './store'
+import store from '@/store'
 import keycloak from '@dsb-norge/vue-keycloak-js';
 import iView from 'iview'
 import config from '@/config'
@@ -13,7 +13,11 @@ import '@/assets/icons/iconfont.css'
 import routes from "./router";
 import VueRouter from "vue-router";
 import '@/components/resource/fonts'
+import Vuex from 'vuex'
+Vue.use(Vuex);
 
+const { keycloakClientID } = config 
+const ssoLoginClientId = process.env.NODE_ENV == "dev" ?  keycloakClientID.dev : (process.env.NODE_ENV == "test" ? keycloakClientID.test : keycloakClientID.prod);
 
 // 加载系统配置
 let sysMainframeInfo = {};
@@ -47,7 +51,7 @@ if (!window.__POWERED_BY_QIANKUN__) {
     config: {
       url: 'https://login.corp.zhidaoxuexiao.com/auth',
       realm: 'zhidao',
-      clientId: 'bus-dev'
+      clientId: ssoLoginClientId
     },
     onReady: (keycloak) => {
       instance = new Vue({
@@ -66,17 +70,27 @@ export async function bootstrap () {
 }
 
 export async function mount (props) {
+  props.onGlobalStateChange((state, prev) => {
+    // state: 变更后的状态; prev 变更前的状态
+    console.log(state, prev);
+  });
+  console.log(props.getGlobalState("a"))
+  // store.commit('setToken', props.getGlobalState("a"), true); 
+
+
   const { container, routerBase } = props
   const router = new VueRouter({
     base: routerBase,
     mode: 'history',
     routes
   })
+  
   instance = new Vue({
     router,
     store,
     render: (h) => h(App)
   }).$mount(container.querySelector('#subContainer'))
+  console.log(props.setGlobalState({'c': 'fgfhffhg'}))
 }
 
 export async function unmount () {
