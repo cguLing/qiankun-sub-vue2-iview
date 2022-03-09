@@ -186,6 +186,9 @@
       },
     },
     mounted() {
+      this.$keycloak.loadUserProfile().success((data) => {
+        console.log(data);
+      });
       // this.getAllGroup()
       // this.getDevDept()
       // this.getUserInfo()

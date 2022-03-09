@@ -5,6 +5,7 @@ import './public-path'
 import Vue from 'vue'
 import App from './App'
 import store from './store'
+import keycloak from '@dsb-norge/vue-keycloak-js';
 import iView from 'iview'
 import config from '@/config'
 import './index.less'
@@ -21,7 +22,6 @@ Vue.prototype.$sysMainFrameInfo = Object.assign({
   TAB_ON: true
 }, sysMainframeInfo)
 /* eslint-disable */
-
 Vue.config.productionTip = false
 let instance = null
 Vue.use(iView)
@@ -37,12 +37,28 @@ if (!window.__POWERED_BY_QIANKUN__) {
     mode: 'history',
     routes
   })
-  instance = new Vue({
-    el: '#subContainer',
-    router,
-    store,
-    render: (h) => h(App)
-  })
+  
+  Vue.use(keycloak , {
+    init: {
+      //是否定时校验登录状态，如果chrome版本大于86.x，请改为false。否则将导致浏览器重复刷新
+      checkLoginIframe: false,
+      onLoad: 'login-required'
+    },
+    config: {
+      url: 'https://login.corp.zhidaoxuexiao.com/auth',
+      realm: 'zhidao',
+      clientId: 'bus-dev'
+    },
+    onReady: (keycloak) => {
+      instance = new Vue({
+        el: '#subContainer',
+        router,
+        keycloak,
+        store,
+        render: (h) => h(App)
+      })
+    }
+  });
 }
 
 export async function bootstrap () {
