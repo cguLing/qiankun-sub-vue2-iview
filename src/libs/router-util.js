@@ -7,7 +7,7 @@ import store from '@/store'
 import { getToken, localSave, localRead } from '@/libs/util'
 // import config from '@/config'
 import { lazyLoadingCop } from '@/libs/tools'
-import { getMockMenuData } from '@/api/data'
+// import { getMockMenuData } from '@/api/data'
 import Main from '@/components/main' // Main 是架构组件，不在后台返回，在文件里单独引入
 
 var gotRouter
@@ -17,24 +17,24 @@ export const initRouter = () => {
     return
   }
   return new Promise(resolve => {
-    let antRouter = localRead('dynamicRouter');
-    if (!antRouter) {
-      getMockMenuData().then(res => {
-        if (res.status === 200) {
-          var routerData = res.data // 后台拿到路由
-          localSave('dynamicRouter', JSON.stringify(routerData)) // 存储路由到localStorage
-          gotRouter = filterAsyncRouter(routerData) // 过滤路由,路由组件转换
-          store.commit('updateMenuList', gotRouter);
-          gotRouter = dynamicRouterAdd()
-          resolve(gotRouter)
-        } else {
-          console.log('请求失败')
-        }
-      })
-    } else {
+    // let antRouter = localRead('dynamicRouter');
+    // if (!antRouter) {
+    //   getMockMenuData().then(res => {
+    //     if (res.status === 200) {
+    //       var routerData = res.data // 后台拿到路由
+    //       localSave('dynamicRouter', JSON.stringify(routerData)) // 存储路由到localStorage
+    //       gotRouter = filterAsyncRouter(routerData) // 过滤路由,路由组件转换
+    //       store.commit('updateMenuList', gotRouter);
+    //       gotRouter = dynamicRouterAdd()
+    //       resolve(gotRouter)
+    //     } else {
+    //       console.log('请求失败')
+    //     }
+    //   })
+    // } else {
       gotRouter = dynamicRouterAdd()
       resolve(gotRouter)
-    }
+    // }
   })
 }
 

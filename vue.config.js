@@ -15,6 +15,20 @@ module.exports = {
     port: 8000,
     headers: {
       'Access-Control-Allow-Origin': '*'
+    },
+    proxy: {
+      '/api/v1/': {
+        target: 'http://127.0.0.1:9999',
+        changeOrigin: true
+        // pathRewrite: {
+        //   '^/api/v1/vpn': '/api/v1/vpn'
+        // }
+      },
+      '/auth': {
+        target: 'https://ids.corp.youdao.com',
+        logLevel: 'debug',
+        changeOrigin: true
+      }
     }
   }
 }

@@ -12,6 +12,10 @@ import '@/assets/icons/iconfont.css'
 import routes from "./router";
 import VueRouter from "vue-router";
 import '@/components/resource/fonts'
+import keycloak from '@dsb-norge/vue-keycloak-js';
+import {
+  userinfoGet
+} from "@/api/other/ids"
 
 
 // 加载系统配置
@@ -37,19 +41,58 @@ if (!window.__POWERED_BY_QIANKUN__) {
     mode: 'history',
     routes
   })
-  instance = new Vue({
-    el: '#subContainer',
-    router,
-    store,
-    render: (h) => h(App)
-  })
+  // instance = new Vue({
+  //   el: '#subContainer',
+  //   router,
+  //   store,
+  //   render: (h) => h(App)
+  // })
+  Vue.use(keycloak , {
+    init: {
+      //是否定时校验登录状态，如果chrome版本大于86.x，请改为false。否则将导致浏览器重复刷新
+      checkLoginIframe: false,
+      onLoad: 'login-required'
+    },
+    config: {
+      url: 'https://ids.corp.youdao.com/auth',
+      realm: 'sso',
+      clientId: 'cyan-dev'
+    },
+    onReady: (keycloak) => {
+      // 用户信息
+      // keycloak.loadUserProfile().success((data) => {
+      //   console.log(data);
+      // });
+      store.dispatch('keycloakLogin',Vue.prototype.$keycloak.token)
+      userinfoGet().then((res)=>{
+        store.dispatch('changeUserInfo',res.data)
+      })
+      instance = new Vue({
+        el: '#subContainer',
+        router,
+        keycloak,
+        store,
+        render: (h) => h(App)
+      })
+    }
+  });
 }
 
 export async function bootstrap () {
   console.log('[vue] vue app bootstraped')
 }
 
-export async function mount (props) {
+export async function mount (props) { 
+  props.onGlobalStateChange((state, prev) => {
+    console.log('globalState 状态变更：')
+  // state: 变更后的状态; prev 变更前的状态
+    console.log(state, prev);
+    store.dispatch('changeUserInfo',state)
+  });
+  // console.log(props.getGlobalState())
+  store.dispatch('changeUserInfo',props.getGlobalState())
+  // store.commit('setToken', props.getGlobalState("a"), true); 
+
   const { container, routerBase } = props
   const router = new VueRouter({
     base: routerBase,
@@ -61,6 +104,7 @@ export async function mount (props) {
     store,
     render: (h) => h(App)
   }).$mount(container.querySelector('#subContainer'))
+  // console.log(props.setGlobalState({'c': 'fgfhffhg'}))
 }
 
 export async function unmount () {
