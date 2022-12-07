@@ -46,7 +46,7 @@ class HttpRequest {
           return response
         }
         const code = response.data.code
-        if(code === 0){
+        if(code === 0 || code == 200){
           return response
         } else if (code === 401) {
           store.dispatch('resetToken')
@@ -75,7 +75,7 @@ class HttpRequest {
             },
           })
           return false
-        } else if (code === 400 || code === 403 || code !== 200) {
+        } else if (code === 400 || code === 403) {
           Message.error({
             content: response.data.msg,
             background: true,
@@ -83,7 +83,8 @@ class HttpRequest {
           })
           return Promise.reject(response.data.msg)
         } else {
-          return response
+          return Promise.reject(response.data.msg)
+          // return response
         }
       },
       error => {
