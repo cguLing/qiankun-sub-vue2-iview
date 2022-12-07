@@ -20,6 +20,10 @@ import './permission'
 import Vuex from 'vuex'
 Vue.use(Vuex);
 
+import zhimaHeader from 'vue-zhima-components'
+// import zhima_header from './components/zhima/index.js'
+Vue.use(zhimaHeader);
+
 // 用闭包实现局部对象storage(注意Storage的方法都重写一遍，不然调用其对象原型方法会报错。)
 var sessionStorageMock = (function(win) {
   var storage = win.sessionStorage;

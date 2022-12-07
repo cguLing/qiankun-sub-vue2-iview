@@ -5,6 +5,7 @@ export const routesDefault =  [
     redirect: '/home',
     meta: {
       layout: true,
+      right: ['none']
     },
     component: 'Main',
     children: [
@@ -15,7 +16,8 @@ export const routesDefault =  [
           // hideInMenu: true,
           icon:'logo-chrome',
           layout: true,
-          title: '首页'
+          title: '首页',
+          right: ['none']
         },
         component: '/home/index.vue'
       },
@@ -25,7 +27,8 @@ export const routesDefault =  [
         meta: {
           hideInMenu: false,
           icon: 'logo-windows',
-          title: '业务部门负责人'
+          title: '业务部门负责人',
+          right: ['none']
         },
         component: '/dept/index.vue'
       }
@@ -35,6 +38,7 @@ export const routesDefault =  [
     path: '/project',
     meta: {
       layout: true,
+      right: ['none']
     },
     component: 'Main',
     children: [
@@ -43,7 +47,8 @@ export const routesDefault =  [
         name: 'project',
         meta: {
           icon: 'ios-navigate',
-          title: '项目组'
+          title: '项目组',
+          right: ['none']
         },
         component: '/project/index.vue'
       }
@@ -54,7 +59,8 @@ export const routesDefault =  [
     name: 'myConnect',
     meta: {
       icon: 'ios-bookmarks',
-      title: '我的服务'
+      title: '我的服务',
+      right: ['none']
     },
     component: 'Main',
     children: [
@@ -62,7 +68,8 @@ export const routesDefault =  [
         path: '/myConnect/IDC',
         name: 'myConnect_IDC',
         meta: {
-          title: '服务1'
+          title: '服务1',
+          right: ['none']
         },
         component: '/service/index.vue'
       },
@@ -70,7 +77,8 @@ export const routesDefault =  [
         path: '/myConnect/IT',
         name: 'myConnect_IT',
         meta: {
-          title: '服务2'
+          title: '服务2',
+          right: ['none']
         },
         component: '/service/index.vue'
       }
@@ -82,13 +90,15 @@ export const routesDefault =  [
     meta: {
       icon: 'ios-navigate',
       title: '操作文档',
-      target: 'link'
+      target: 'link',
+      right: ['none']
     }
   },
   {
     path: '/404',
     meta: {
       layout: true,
+      right: ['none']
     },
     component: '/error/404/index.vue'
   },
@@ -98,6 +108,7 @@ export const routesDefault =  [
     redirect: '/404',
     meta: {
       layout: true,
+      right: ['none']
     }
   }
 ]

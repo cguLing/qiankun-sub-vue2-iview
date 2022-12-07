@@ -1,22 +1,27 @@
 <template>
   <Layout style="height: 100%;" class="layout-body">
-    <div class="sider-bar left">
-      <Sider
-        class="sider-menu-bar"
-        ref="siderProductBar"
-        v-model="collapsed"
-        collapsible
-        :collapsed-width="50"
-        :width="200"
-      >
-        <div class="menu-bar" style="height: calc(100% - 100px);">
-          <MenuBar ref="sysMenu">
-            <template slot="appInfo">{{$sysMainFrameInfo.APP_NAME}}</template>
-          </MenuBar>
-        </div>
-      </Sider>
-    </div>
-    <Layout>
+    <Header class="header-con" v-if="showHeader">
+      <zhimaHeader ref="header">
+        <user />
+      </zhimaHeader>
+    </Header>
+    <Layout style="height:100%">
+      <div class="sider-bar left">
+        <Sider
+          class="sider-menu-bar"
+          ref="siderProductBar"
+          v-model="collapsed"
+          collapsible
+          :collapsed-width="45"
+          :width="180"
+        >
+          <div class="menu-bar" style="height: calc(100% - 100px);">
+            <MenuBar ref="sysMenu" :collapsed="collapsed">
+              <template slot="appInfo">{{$sysMainFrameInfo.APP_NAME}}</template>
+            </MenuBar>
+          </div>
+        </Sider>
+      </div>
       <Content class="content-con">
         <Layout class="layout-con">
           <div v-if="$sysMainFrameInfo.TAB_ON">
@@ -42,24 +47,33 @@
 import MenuBar from './menu/index.vue'
 import { mapMutations, mapGetters } from 'vuex'
 // import { getNewTagList, routeEqual } from '@/libs/util'
-import routes from '@/router'
+import User from '@/components/user'
+import routes from '@/router/routes'
 import './main.less'
 export default {
   name: 'Main',
   components: {
-    MenuBar
+    MenuBar,
+    User
   },
   data () {
     return {
       collapsed: false,
       random: 0,
-      clickedTab: 'home'
+      clickedTab: 'home',
+      showHeader: false
     }
   },
   computed: {
     ...mapGetters([
       'errorCount'
     ]),
+    qiankun () {
+      return sessionStorage.getItem('qiankun')
+    },
+    right () {
+      return this.$store.state.user.right
+    },
     tagNavList () {
       return this.$store.state.app.tagNavList
     },
@@ -109,7 +123,10 @@ export default {
     /**
      * @description 初始化设置面包屑导航和标签导航
      */
-    this.setHomeRoute(routes)
+    this.showHeader = this.qiankun=='true'? false: true
+    this.setHomeRoute(routes.map((obj)=>{
+      return obj.meta.right.includes(this.right)
+    }))
     if(this.$route.name!=='home'){
       this.addTag({
         route: { name:'home', query:undefined, params:undefined, meta:{title: '首页'}},

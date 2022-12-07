@@ -16,11 +16,10 @@ export default {
     dept1Name: "",
     dept2Name: "",
     dept3Name: "",
-    right:'',
+    right:'none',
 
     avatar:'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    token: getToken(),
-
+    token: getToken()
   },
   mutations: {
     setUserName (state, username) {
