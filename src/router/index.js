@@ -9,7 +9,6 @@ Vue.use(VueRouter)
  */
  function generaRoute(routes, data) {
   data.forEach((item) => {
-    console.log(item.component,item)
     const menu = {
       path: item.path,
       component:
