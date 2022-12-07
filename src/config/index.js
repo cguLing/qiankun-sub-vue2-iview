@@ -2,7 +2,7 @@ export default {
   /**
    * @description 配置显示在浏览器标签的title
    */
-  title: 'iView-admin',
+  title: '服务账单平台',
   /**
    * @description token在Cookie中存储的天数，默认1天
    */
@@ -17,14 +17,21 @@ export default {
    * @description api请求基础路径
    */
   baseURL: {
-    dev: 'https://www.easy-mock.com/mock/5add9213ce4d0e69998a6f51/iview-admin/',
-    test: 'https://produce.com',
-    prod: 'https://produce.com',
+    dev: 'http://127.0.0.1:9999/',
+    pro: 'https://zhima-bill.site.youdao.com/'
   },
-  keycloakClientID: {
-    dev: 'bus-dev',
-    test: 'bus-test',
-    prod: 'bus-prod'
+  /**
+   * @description sso 认证
+   */
+  prod_keycloak: {
+    url: 'https://ids.corp.youdao.com/auth',
+    realm: 'sso',
+    clientId: 'zhima-bill'
+  },
+  dev_keycloak: {
+    url: 'https://ids.corp.youdao.com/auth',
+    realm: 'sso',
+    clientId: 'vpn-login.site.youdao.com'
   },
   /**
    * @description 默认打开的首页的路由name值，默认为home
