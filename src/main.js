@@ -9,10 +9,10 @@ import keycloak from '@dsb-norge/vue-keycloak-js';
 import iView from 'iview'
 import config from '@/config'
 import './index.less'
-// import '@/assets/icons/iconfont.css'
+import '@/assets/icons/iconfont.css'
+import '@/assets/fonts'
 import router,{ resetRouter } from "./router";
 // import VueRouter from "vue-router";
-import '@/components/resource/fonts'
 import {
   userinfoGet
 } from "@/api/other/ids"
