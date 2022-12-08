@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <Row :gutter="20">
+    <Row :gutter="20">
       <Col
         :xs="12" :md="8" :lg="4"
         v-for="(infor, i) in inforCardData"
@@ -11,16 +11,20 @@
           <p>{{ infor.title }}</p>
         </InfoCard>
       </Col>
-    </Row> -->
+    </Row>
   </div>
 </template>
 
 <script>
-// import InfoCard from '@/components/info-card'
-
+import InfoCard from './components/InfoCard'
+import CountTo from './components/CountTo'
+import {
+  infoGet
+} from '@/api/home'
 export default {
   components: {
-    // InfoCard
+    InfoCard,
+    CountTo
   },
   data() {
     return {
@@ -28,23 +32,16 @@ export default {
     }
   },
   mounted(){
-
+    this.init()
   },
   methods: {
-    // async cardInfo() {
-    //   try {
-    //     const res = await HomeCard();
-    //     if (res.status === 200) {
-    //       this.inforCardData = res.data.data;
-    //     } else {
-    //       this.$Message.error("获取卡片数据失败");
-    //     }
-    //   } catch (err) {
-    //     if (err.response && err.response.status !== 401) {
-    //       this.$Message.error("获取卡片数据失败");
-    //     }
-    //   }
-    // },  
+    init() {
+      infoGet().then((res)=>{
+        this.inforCardData = res.data.data
+      }).catch((e)=>{
+        this.$Message.error("获取卡片数据失败")
+      })
+    },  
   }
 }
 </script>
