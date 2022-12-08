@@ -9,13 +9,27 @@
             :placeholder="searchPlace" 
             @keyup.enter.native="handleSearch"/>
         </FormItem>
-        <FormItem v-if="searchForm.hasOwnProperty('keyword')">
-          <Button type="primary" ghost @click="handleSearch">{{searchButton}}</Button>
+        <FormItem v-if="JSON.stringify(searchForm) != '{}'">
+          <Button
+            v-for="item in searchButton"
+            :key="item.key"
+            :type="item.type"
+            :style="item.style"
+            :icon="item.icon"
+            ghost
+            @click="handleSearch(item.key)">{{item.name}}</Button>
         </FormItem>
       </Form>
     </Row>
-    <Row :style="Object.keys(searchForm).length==0?'margin-bottom:10px':'margin:-25px 0 10px 0'">
-      <Button type="primary" icon="md-add" ghost @click="handleAdd">{{addButton}}</Button>
+    <Row v-if="tableButton.length>0" :style="Object.keys(searchForm).length==0?'margin-bottom:10px':'margin:-25px 0 10px 0'">
+      <Button
+        v-for="item in tableButton"
+        :key="item.key"
+        :type="item.type"
+        :style="item.style"
+        :icon="item.icon"
+        ghost
+        @click="handleTable(item.key)">{{item.name}}</Button>
     </Row>
     <Row>
       <Table :loading="tableLoading" :columns="tableCols" :data="tableData">
@@ -72,12 +86,28 @@ export default {
       default: '请输入关键字搜索'
     },
     searchButton: {
-      type: String,
-      default: '查询'
+      type: Array,
+      default: ()=>{ return [{
+        key:'search',
+        type:'primary',
+        style:'',
+        icon:'',
+        name:'查询'
+      }]}
     },
     addButton: {
       type: String,
       default: '新增'
+    },
+    tableButton: {
+      type: Array,
+      default: ()=>[{
+        key:'add',
+        type:'primary',
+        style:'',
+        icon:'md-add',
+        name:'新增'
+      }]
     },
     tableCols: {
       required: true,
@@ -109,21 +139,17 @@ export default {
   watch: {
   },
   methods: {
-    handleDrop(name){
-      this.searchForm.inst_type=name
-      this.handleSearch()
+    handleSearch(key){
+      this.$emit('handleSearch', this.searchForm, key)
     },
-    handleSearch(){
-      this.$emit('handleSearch', this.searchForm)
-    },
-    handleAdd(){
-      this.$emit('handleAdd')
+    handleTable(key){
+      this.$emit('handleTable', key)
     },
     handleAction(row, type){
       this.$emit('handleAction', row, type)
     },
     handlePage(){
-      this.handleSearch()
+      this.handleSearch('search')
     },
     handlePageSize(val){
       this.searchForm.page_size = val
