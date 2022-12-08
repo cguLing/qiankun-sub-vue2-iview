@@ -6,3 +6,9 @@ export const infoGet = () => {
     method: 'get'
   })
 }
+export const mouthGet = () => {
+  return axios.request({
+    url: '/api/v1/subapp/devops/home/month/analysis/',
+    method: 'get'
+  })
+}
