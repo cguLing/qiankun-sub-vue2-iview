@@ -16,7 +16,7 @@
             :type="item.type"
             :style="item.style"
             :icon="item.icon"
-            ghost
+            :ghost="item.ghost"
             @click="handleSearch(item.key)">{{item.name}}</Button>
         </FormItem>
       </Form>
@@ -28,7 +28,8 @@
         :type="item.type"
         :style="item.style"
         :icon="item.icon"
-        ghost
+        :ghost="item.ghost"
+        :size="item.size"
         @click="handleTable(item.key)">{{item.name}}</Button>
     </Row>
     <Row>
@@ -48,7 +49,7 @@
                   size="small"
                   :type="item.type"
                   :icon="item.icon"
-                  ghost
+                  :ghost="item.ghost"
                   :style="item.style">{{item.name}}</Button>
               </Poptip>
             </div>
@@ -92,12 +93,9 @@ export default {
         type:'primary',
         style:'',
         icon:'',
+        ghost:true,
         name:'查询'
       }]}
-    },
-    addButton: {
-      type: String,
-      default: '新增'
     },
     tableButton: {
       type: Array,
@@ -105,6 +103,7 @@ export default {
         key:'add',
         type:'primary',
         style:'',
+        ghost:true,
         icon:'md-add',
         name:'新增'
       }]

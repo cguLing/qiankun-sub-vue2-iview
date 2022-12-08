@@ -3,6 +3,7 @@
     <common-table ref=""
       :tableCols="tableCols"
       :tableData="tableData"
+      :tableButton="[]"
       :tableLoading="tableLoading"
       :searchForm.sync="searchForm"
       @handleSearch="handleSearch" />

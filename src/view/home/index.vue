@@ -50,6 +50,9 @@ export default {
       })
       mouthGet().then((res)=>{
         this.monthData = res.data.data;
+        this.monthData.timeList.reverse()
+        this.monthData.successList.reverse()
+        this.monthData.errorList.reverse()
       }).then(()=>{
         this.drawLine()
       })

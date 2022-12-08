@@ -15,7 +15,7 @@ export const routesDefault =  [
         meta: {
           // hideInMenu: true,
           icon:'logo-chrome',
-          layout: true,
+          // layout: true,
           title: '首页',
           right: ['none']
         },
@@ -31,7 +31,7 @@ export const routesDefault =  [
           right: ['none']
         },
         component: '/dept/index.vue'
-      }
+      },
     ]
   },
   {
@@ -65,6 +65,26 @@ export const routesDefault =  [
     ]
   },
   {
+    path: '/compileImage',
+    meta: {
+      layout: true,
+      right: ['none']
+    },
+    component: 'Main',
+    children: [
+      {
+        path: '/compileImage',
+        name: 'compile-image',
+        meta: {
+          icon: 'md-filing',
+          title: '编译镜像',
+          right: ['none']
+        },
+        component: '/compile_image/index.vue'
+      }
+    ]
+  },
+  {
     path: '/opLog',
     meta: {
       layout: true,
@@ -80,7 +100,7 @@ export const routesDefault =  [
           title: '操作日志',
           right: ['none']
         },
-        component: '/oplog/index.vue'
+        component: '/op_log/index.vue'
       }
     ]
   },
