@@ -1,21 +1,13 @@
 <template>
   <div>
     <Row type="flex" justify="end">
-      <Form ref="searchForm" :model="searchForm" inline>
-        <FormItem prop="inst_type" v-if="searchForm.hasOwnProperty('inst_type')">
-          <Dropdown @on-click="handleDrop">
-            <a href="javascript:void(0)" style="font-size:16px;font-weight:bolder">
-              {{searchForm.inst_type}}
-              <Icon type="ios-arrow-down"></Icon>
-            </a>
-            <DropdownMenu slot="list">
-              <DropdownItem name="IDC">IDC</DropdownItem>
-              <DropdownItem name="IT">IT</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </FormItem>
+      <Form ref="searchForm" :model="searchForm" inline @submit.native.prevent>
         <FormItem prop="keyword" style="width:300px" v-if="searchForm.hasOwnProperty('keyword')">
-          <Input search v-model="searchForm.keyword" :placeholder="searchPlace" />
+          <Input
+            search
+            v-model="searchForm.keyword"
+            :placeholder="searchPlace" 
+            @keyup.enter.native="handleSearch"/>
         </FormItem>
         <FormItem v-if="searchForm.hasOwnProperty('keyword')">
           <Button type="primary" ghost @click="handleSearch">{{searchButton}}</Button>

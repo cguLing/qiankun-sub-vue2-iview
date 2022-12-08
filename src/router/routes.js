@@ -35,26 +35,6 @@ export const routesDefault =  [
     ]
   },
   {
-    path: '/project',
-    meta: {
-      layout: true,
-      right: ['none']
-    },
-    component: 'Main',
-    children: [
-      {
-        path: '/project',
-        name: 'project',
-        meta: {
-          icon: 'ios-navigate',
-          title: '项目组',
-          right: ['none']
-        },
-        component: '/project/index.vue'
-      }
-    ]
-  },
-  {
     path: '/myConnect',
     name: 'myConnect',
     meta: {
@@ -85,15 +65,35 @@ export const routesDefault =  [
     ]
   },
   {
-    path: 'https://www.baidu.com/',
-    name: 'doc',
+    path: '/opLog',
     meta: {
-      icon: 'ios-navigate',
-      title: '操作文档',
-      target: 'link',
+      layout: true,
       right: ['none']
-    }
+    },
+    component: 'Main',
+    children: [
+      {
+        path: '/opLog',
+        name: 'option-log',
+        meta: {
+          icon: 'ios-copy',
+          title: '操作日志',
+          right: ['none']
+        },
+        component: '/oplog/index.vue'
+      }
+    ]
   },
+  // {
+  //   path: 'https://www.baidu.com/',
+  //   name: 'doc',
+  //   meta: {
+  //     icon: 'ios-navigate',
+  //     title: '操作文档',
+  //     target: 'link',
+  //     right: ['none']
+  //   }
+  // },
   {
     path: '/404',
     meta: {
