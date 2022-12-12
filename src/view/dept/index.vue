@@ -1,5 +1,5 @@
 <template>
-  <div class="list">
+  <div>
     <Card>
       <Row style="margin-top: 15px">
         <i-col span='7'>
@@ -186,6 +186,9 @@
       },
     },
     mounted() {
+      this.$keycloak.loadUserProfile().success((data) => {
+        console.log(data);
+      });
       // this.getAllGroup()
       // this.getDevDept()
       // this.getUserInfo()

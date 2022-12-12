@@ -11,7 +11,8 @@ import {
   localSave,
   localRead
 } from '@/libs/util'
-import routes from '@/router'
+import user from './user'
+// import routesDefault, {routesCharge} from '@/router/routes'
 import config from '@/config'
 const { homeName } = config
 
@@ -21,11 +22,19 @@ export default {
     tagNavList: [],
     homeRoute: {},
     local: localRead('local')
+    // menuList:[]
   },
   getters: {
-    menuList: (state, getters, rootState) => getMenuByRouter(routes, rootState.user.access),
+    menuList: (state, getters) => getMenuByRouter(user.state.right),
   },
   mutations: {
+    // RESET_MENULIST: (state) => {
+    //   let tmp = routesDefault
+    //   if(sessionStorage.getItem('manager')==1){
+    //     tmp = tmp.concat(routesCharge)
+    //   }
+    //   state.menuList =  getMenuByRouter(user.state.right,tmp)
+    // },
     setBreadCrumb (state, route) {
       state.breadCrumbList = getBreadCrumbList(route, state.homeRoute)
     },
@@ -68,5 +77,9 @@ export default {
       state.local = lang
     },
   },
-  actions: {}
+  actions: {
+    // resteMenulist({ commit }) {
+    //   commit("RESET_MENULIST");
+    // }
+  }
 }

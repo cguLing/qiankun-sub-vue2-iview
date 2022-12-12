@@ -1,7 +1,6 @@
 import axios from 'axios'
 import store from '@/store'
-import Vue from 'vue'
-// import { getToken } from '@/libs/auth'
+import { getToken } from '@/libs/auth'
 import { Message } from 'iview'
 
 class HttpRequest {
@@ -22,8 +21,8 @@ class HttpRequest {
     // 请求拦截
     instance.interceptors.request.use(
       config => {
-        if (Vue.prototype.$keycloak.token) { //新SSO
-          config.headers['Authorization'] = `Bearer ${Vue.prototype.$keycloak.token}` //新SSO
+        if (getToken()) { //新SSO
+          config.headers['Authorization'] = `Bearer ${getToken()}` //新SSO
           
           // 添加全局的loading...
           if (!Object.keys(this.queue).length) {
@@ -47,7 +46,7 @@ class HttpRequest {
           return response
         }
         const code = response.data.code
-        if(code === 0){
+        if(code === 0 || code == 200){
           return response
         } else if (code === 401) {
           store.dispatch('resetToken')
@@ -76,7 +75,7 @@ class HttpRequest {
             },
           })
           return false
-        } else if (code === 400 || code === 403 || code !== 200) {
+        } else if (code === 400 || code === 403) {
           Message.error({
             content: response.data.msg,
             background: true,
@@ -84,16 +83,17 @@ class HttpRequest {
           })
           return Promise.reject(response.data.msg)
         } else {
-          return response
+          return Promise.reject(response.data.msg)
+          // return response
         }
       },
       error => {
-        if (error.response.status === 401) {
+        if (error.response&&error.response.status === 401) {
           Message.error('登陆状态已变化，请重新登陆')
           store.dispatch('keycloakLogout')
           return
         }
-        if (error.message === 'Network Error') {
+        if (error.message&&error.message === 'Network Error') {
           Message.error({
             content: '服务器连接异常，请检查服务器！',
             background: true,

@@ -1,109 +1,71 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Main from '@/components/main'
-
+// import Main from '@/components/main'
+import routesDefault, {routesCharge} from './routes'
 Vue.use(VueRouter)
-
-const routes =  [
-  {
-    path: '/',
-    name: '/',
-    redirect: '/home',
-    meta: {
-      layout: true,
-    },
-    component: Main,
-    children: [
-      {
-        path: '/home',
-        name: 'home',
-        meta: {
-          hideInMenu: true,
-          layout: true,
-          title: '首页'
-        },
-      },
-      {
-        path: '/dept',
-        name: 'dept',
-        meta: {
-          hideInMenu: false,
-          icon: 'logo-windows',
-          title: '业务部门负责人'
-        },
-        component: () => import('@/view/dept/index.vue')
-      }
-    ]
-  },
-  {
-    path: '/project',
-    meta: {
-      layout: true,
-    },
-    component: Main,
-    children: [
-      {
-        path: '/project',
-        name: 'project',
-        meta: {
-          icon: 'ios-navigate',
-          title: '项目组'
-        },
-        component: () => import('@/view/project/index.vue')
-      }
-    ]
-  },
-  {
-    path: '/myConnect',
-    name: 'myConnect',
-    meta: {
-      icon: 'ios-bookmarks',
-      title: '我的服务'
-    },
-    component: Main,
-    children: [
-      {
-        path: '/myConnect/IDC',
-        name: 'myConnect_IDC',
-        meta: {
-          title: '服务1'
-        },
-        component: () => import('@/view/service/index.vue')
-      },
-      {
-        path: '/myConnect/IT',
-        name: 'myConnect_IT',
-        meta: {
-          title: '服务2'
-        },
-        component: () => import('@/view/service/index.vue')
-      }
-    ]
-  },
-  {
-    path: 'https://www.baidu.com/',
-    name: 'doc',
-    meta: {
-      icon: 'ios-navigate',
-      title: '操作文档',
-      target: 'link'
+/**
+ * 后台查询的菜单数据拼装成路由格式的数据
+ * @param routes
+ */
+ function generaRoute(routes, data) {
+  data.forEach((item) => {
+    const menu = {
+      path: item.path,
+      component:
+        item.component === "Main" ? ()=>import('@/components/main') : ()=>import(`@/view${item.component}`), 
+      children: [],
+      name: item.name,
+      redirect: item.redirect,
+      meta: item.meta 
+    };
+    if (item.children) {
+      generaRoute(menu.children, item.children);
     }
-  },
-  {
-    path: '/404',
-    meta: {
-      layout: true,
-    },
-    component: () => import('@/view/error/404/index.vue')
-  },
-  {
-    path: '*',
-    name: '*',
-    redirect: '/404',
-    meta: {
-      layout: true,
-    }
-  }
-]
+    routes.push(menu);
+  });
+}
 
-export default routes
+let result = []
+if(sessionStorage.getItem('manager')==1){
+  generaRoute(result,routesDefault.concat(routesCharge))
+} else {
+  generaRoute(result,routesDefault)
+}
+// 用户权限 => 此为写死的方案
+// let user = store.state.user.username
+// let right = store.state.app.right
+// const routes = result.filter((obj)=>{
+//   if(!obj.meta.right) return true
+//   for (let i = 0; i < obj.meta.right.length; i++) {
+//     const item = obj.meta.right[i];
+//     if(right[item].includes(user)) return true
+//   }
+//   return false
+// })
+// const routes = result
+// export default routes
+
+const createRouter = () =>
+  new VueRouter({
+    base: window.__POWERED_BY_QIANKUN__ ? '/bill' : process.env.BASE_URL,
+    // scrollBehavior: () => ({ y: 0 }),
+    routes: result,
+    mode: 'history'
+  });
+
+const router = createRouter();
+
+export function resetRouter() {
+  return new Promise(resolve => {
+    result = []
+    let tmp = routesDefault
+    if(sessionStorage.getItem('manager')==1){
+      tmp = tmp.concat(routesCharge)
+    }
+    generaRoute(result,tmp)
+    const newRouter = createRouter();
+    router.matcher = newRouter.matcher; // reset router
+    resolve(result)
+  })
+}
+export default router

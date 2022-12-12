@@ -1,8 +1,6 @@
-// import {
-//   login,
-//   logout,
-//   getUserInfo
-// } from '@/api/user'
+import {
+  userinfoGet
+} from '@/api/other/ids'
 import { setToken, getToken, removeToken } from '@/libs/auth'
 import Vue from 'vue'
 
@@ -18,10 +16,10 @@ export default {
     dept1Name: "",
     dept2Name: "",
     dept3Name: "",
+    right:'none',
 
-    right: {superAdmin:['chenjh03','taoyl']},
-    token: getToken(),
-
+    avatar:'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+    token: getToken()
   },
   mutations: {
     setUserName (state, username) {
@@ -65,15 +63,36 @@ export default {
   },
   actions: {
     changeUserInfo({commit}, user){
-      commit('setUserName',user.username)
-      commit('setJobNumber',user.jobNumber)
-      commit('setEmployeeName',user.employeeName)
-      commit('setType',user.type)
-      commit('setCorpMail',user.corpMail)
-      commit('setRdMail',user.rdMail)
-      commit('setDept1Name',user.dept1Name)
-      commit('setDept2Name',user.dept2Name)
-      commit('setDept3Name',user.dept3Name)
+      return new Promise((resolve, reject) => {
+        if(!user){
+          userinfoGet().then((res)=>{
+            user = res.data
+            commit('setUserName',user.username)
+            commit('setJobNumber',user.jobNumber)
+            commit('setEmployeeName',user.employeeName)
+            commit('setType',user.type)
+            commit('setCorpMail',user.corpMail)
+            commit('setRdMail',user.rdMail)
+            commit('setDept1Name',user.dept1Name)
+            commit('setDept2Name',user.dept2Name)
+            commit('setDept3Name',user.dept3Name)
+            resolve(user)
+          }).catch(err => {
+            reject('获取用户信息出错')
+          })
+        } else {
+          commit('setUserName',user.username)
+          commit('setJobNumber',user.jobNumber)
+          commit('setEmployeeName',user.employeeName)
+          commit('setType',user.type)
+          commit('setCorpMail',user.corpMail)
+          commit('setRdMail',user.rdMail)
+          commit('setDept1Name',user.dept1Name)
+          commit('setDept2Name',user.dept2Name)
+          commit('setDept3Name',user.dept3Name)
+          resolve(user)
+        }
+      })
     },
     // 新SSO
     keycloakLogin({ commit }, accessToken) {
@@ -127,11 +146,9 @@ export default {
     // keycloakLogout
     keycloakLogout({ commit, state }) {
       return new Promise((resolve, reject) => {
-        console.log('2222222222222')
-        console.log(Vue.prototype.$keycloak.token)
+        // console.log(Vue.prototype.$keycloak.token)
         try {
           Vue.prototype.$keycloak.logoutFn()
-          console.log('111111111111')
           commit('setToken', '')
           // commit('SET_ROLES', [])
           removeToken()
