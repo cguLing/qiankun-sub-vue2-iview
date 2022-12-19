@@ -18,7 +18,7 @@ export default {
    */
   baseURL: {
     dev: 'http://127.0.0.1:9999/',
-    pro: 'https://zhima-bill.site.youdao.com/'
+    pro: 'https://zhima-bus.site.youdao.com/'
   },
   /**
    * @description sso 认证
@@ -26,7 +26,7 @@ export default {
   prod_keycloak: {
     url: 'https://ids.corp.youdao.com/auth',
     realm: 'sso',
-    clientId: 'zhima-bill'
+    clientId: 'zhima-bus'
   },
   dev_keycloak: {
     url: 'https://ids.corp.youdao.com/auth',
