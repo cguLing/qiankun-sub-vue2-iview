@@ -1,15 +1,37 @@
 <template>
   <div>
     <Row type="flex" justify="end">
-      <Form ref="searchForm" :model="searchForm" inline @submit.native.prevent>
-        <FormItem prop="keyword" style="width:300px" v-if="searchForm.hasOwnProperty('keyword')">
+      <Form
+        v-if="!$slots.default"
+        ref="searchForm"
+        :model="searchForm"
+        inline
+        :label-width="searchFormConf.labelWidth"
+        @submit.native.prevent>
+        <FormItem
+          v-for="item in Object.keys(searchForm)" :key="item"
+          :prop="item+'.value'"
+          :label="searchForm[item].label"
+          :label-width="searchForm[item].labelWidth">
+          <Input
+            v-if="searchForm[item].type=='input'"
+            :style="searchForm[item].style"
+            :search="searchForm[item].search"
+            v-model="searchForm[item].value"
+            :placeholder="searchForm[item].placeholder" 
+            @keyup.enter.native="handleSearch(searchForm[item].searchKey||'search')"/>
+        </FormItem>
+        <!-- <FormItem
+          prop="keyword"
+          style="width:300px"
+          v-if="searchForm.hasOwnProperty('keyword')">
           <Input
             search
             v-model="searchForm.keyword"
             :placeholder="searchPlace" 
             @keyup.enter.native="handleSearch"/>
-        </FormItem>
-        <FormItem v-if="JSON.stringify(searchForm) != '{}'">
+        </FormItem> -->
+        <FormItem v-if="JSON.stringify(searchForm) != '{}'" :label-width="0">
           <Button
             v-for="item in searchButton"
             :key="item.key"
@@ -21,7 +43,7 @@
         </FormItem>
       </Form>
     </Row>
-    <Row v-if="tableButton.length>0" :style="Object.keys(searchForm).length==0?'margin-bottom:10px':'margin:-25px 0 10px 0'">
+    <Row v-if="tableButton.length>0" :style="Object.keys(searchForm).length==0?'margin-bottom:10px':'margin:-20px 0 10px 0'">
       <Button
         v-for="item in tableButton"
         :key="item.key"
@@ -66,11 +88,12 @@
         </template>
       </Table>
     </Row>
-    <Row type="flex" justify="end" style="margin-top:15px" v-if="searchForm.hasOwnProperty('total')">
+    <Row type="flex" justify="end" style="margin-top:15px" 
+      v-if="tablePages.hasOwnProperty('total')">
       <Page
-        :total="searchForm.total"
-        :page-size.sync="searchForm.page_size"
-        :current.sync="searchForm.page"
+        :total="tablePages.total"
+        :page-size.sync="tablePages.page_size"
+        :current.sync="tablePages.page"
         show-total show-elevator show-sizer
         @on-change="handlePage"
         @on-page-size-change="handlePageSize">
@@ -82,6 +105,12 @@
 export default {
   name: 'CommonTable',
   props: {
+    searchFormConf: {
+      type: Object,
+      default: () => { return {
+        labelWidth:0
+      }}
+    },
     searchPlace: {
       type: String,
       default: '请输入关键字搜索'
@@ -126,6 +155,10 @@ export default {
         {name:'编辑',type:'text',icon:'md-create', style:'color:#2d8cf0;',click:'edit'},
         {name:'删除',type:'text',icon:'md-trash', style:'color:#ed4014;',click:'delete'}]
     },
+    tablePages: {
+      type: Object,
+      default: () => { return {}}
+    },
     searchForm: {
       type: Object,
       default: () => { return {}}
@@ -135,6 +168,7 @@ export default {
     return {
     }
   },
+
   watch: {
   },
   methods: {
@@ -148,7 +182,7 @@ export default {
       this.$emit('handleAction', row, type)
     },
     handlePage(){
-      this.handleSearch('search')
+      this.handleSearch('page')
     },
     handlePageSize(val){
       this.searchForm.page_size = val
@@ -157,3 +191,15 @@ export default {
   }
 }
 </script>
+<style lang="less">
+@keyframes rotate {
+    0%{-webkit-transform:rotate(0deg);}
+    25%{-webkit-transform:rotate(90deg);}
+    50%{-webkit-transform:rotate(180deg);}
+    75%{-webkit-transform:rotate(270deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+.run {
+  animation: rotate 1s linear infinite;
+}
+</style>
